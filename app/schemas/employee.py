@@ -7,7 +7,7 @@ class EmployeeSchema(BaseModel):
     name: str
     email: str
     type: Optional[str] = "personal"
-    created_at: datetime
+    created_at: Optional[datetime] = None
     deactivated: Optional[datetime] = None
-    invited: datetime
+    invited: Optional[datetime] = None
     projects: Optional[list[str]] = []
