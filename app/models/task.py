@@ -18,3 +18,4 @@ class Task(Base):
     project = relationship("Project", back_populates="tasks")
     
     employees = relationship("Employee", secondary=task_employee, back_populates="tasks")
+    time_entries = relationship("TimeEntry", back_populates="task")

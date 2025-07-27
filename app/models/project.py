@@ -15,3 +15,4 @@ class Project(Base):
 
     employees = relationship("Employee", secondary="project_employees", back_populates="projects")
     tasks = relationship("Task", back_populates="project")
+    time_entries = relationship("TimeEntry", back_populates="project")
