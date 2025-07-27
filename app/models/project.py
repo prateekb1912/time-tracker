@@ -14,3 +14,4 @@ class Project(Base):
     created_at = Column(DateTime, default=timestamp)
 
     employees = relationship("Employee", secondary="project_employees", back_populates="projects")
+    tasks = relationship("Task", back_populates="project")

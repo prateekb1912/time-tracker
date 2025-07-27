@@ -14,3 +14,4 @@ class Employee(Base):
     invited = Column(DateTime, default=timestamp)
 
     projects = relationship("Project", secondary="project_employees", back_populates="employees")
+    tasks = relationship("Task", secondary="task_employee", back_populates="employees")
