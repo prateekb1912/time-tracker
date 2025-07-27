@@ -16,3 +16,4 @@ class Employee(Base):
     projects = relationship("Project", secondary="project_employees", back_populates="employees")
     tasks = relationship("Task", secondary="task_employee", back_populates="employees")
     time_entries = relationship("TimeEntry", back_populates="employee")
+    screenshots = relationship("Screenshot", back_populates="employee")

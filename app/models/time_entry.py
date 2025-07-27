@@ -25,4 +25,5 @@ class TimeEntry(Base):
     # Relationships
     employee = relationship("Employee", back_populates="time_entries")
     project = relationship("Project", back_populates="time_entries")
-    task = relationship("Task", back_populates="time_entries") 
+    task = relationship("Task", back_populates="time_entries")
+    screenshots = relationship("Screenshot", back_populates="time_entry") 
